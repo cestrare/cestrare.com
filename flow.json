@@ -39,8 +39,8 @@
       "keys": "11c5dfdeb0ff03a7a73ef39788563b62c89adea67bbb21ab95e5f710bd1d40b7"
     },
     "testnet-account": {
-      "address": "${FLOW_ADDRESS}",
-      "keys": "${FLOW_PRIVATE_KEY}"
+      "address": "0xb1190878478ffd90",
+      "keys": "e22760e0b28f33737495ee9121d05a3f297f8d165367a100c50ca1e02e949ab8"
     }
   },
   "deployments": {
