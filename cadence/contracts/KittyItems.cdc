@@ -4,6 +4,7 @@ import NonFungibleToken from "./NonFungibleToken.cdc"
 // NFT items for Kitties!
 //
 pub contract KittyItems: NonFungibleToken {
+// pub contract CestRaretems: NonFungibleToken {
 
     // Events
     //
