@@ -509,6 +509,8 @@
 
       .bio__name,
       .bio__description {
+        line-height: 20px;
+        padding: 0 0px 20px;
         font-size: 16px;
       }
 
@@ -647,8 +649,10 @@
     <div class="bio_blurb">
       <h2 class="bio__name">C’estRare</h2>
       <p class="bio__description">
-        Welcome in the fisrt decentralized Marketplace For Non-Fungible Tokens as pictures
+        Welcome in the world fisrt decentralized marketplace for Non-Fungible Tokens as pictures
       </p>
+      <br>
+      <p id="timer" class="bio__description">Loading...</p>
     </div>
   </section>
   <nav>
@@ -805,5 +809,42 @@
   </nav>
   <span class="copyright">© 2021 cestrare.com</span>
 </footer>
+
+<script>
+  // var end = new Date('04/01/2021');
+  // var end = new Date('02/19/2012 10:1 AM');
+  var end = new Date(2021, 3, 10);
+  console.log({ end })
+
+
+  var _second = 1000;
+  var _minute = _second * 60;
+  var _hour = _minute * 60;
+  var _day = _hour * 24;
+  var timer;
+
+  function showRemaining() {
+    var now = new Date();
+    var distance = end - now;
+    if (distance < 0) {
+
+      clearInterval(timer);
+      document.getElementById('timer').innerHTML = 'EXPIRED!';
+
+      return;
+    }
+    var days = Math.floor(distance / _day);
+    var hours = Math.floor((distance % _day) / _hour);
+    var minutes = Math.floor((distance % _hour) / _minute);
+    var seconds = Math.floor((distance % _minute) / _second);
+
+    document.getElementById('timer').innerHTML = days + 'days ';
+    document.getElementById('timer').innerHTML += hours + 'hrs ';
+    document.getElementById('timer').innerHTML += minutes + 'mins ';
+    document.getElementById('timer').innerHTML += seconds + 'secs';
+  }
+
+  timer = setInterval(showRemaining, 1000);
+</script>
 
 </html>
